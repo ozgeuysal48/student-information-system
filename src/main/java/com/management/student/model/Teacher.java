@@ -13,8 +13,8 @@ import javax.persistence.Table;
 @Table(name = "teachers")
 public class Teacher {
 
-	@Id // bu bir id dedik
-	@GeneratedValue(strategy = GenerationType.AUTO) // id yi otomatik olarak kendin uret sirayla dedik
+	@Id 
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "department_id")
 	public Long department_id;
 	

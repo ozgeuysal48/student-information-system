@@ -20,8 +20,8 @@ public class Student {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "student_id")
-	public Long student_id;	
+	@Column(name = "studentid")
+	public Long studentid;	
 	
 	  @OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
 	    @PrimaryKeyJoinColumn
@@ -49,10 +49,10 @@ public class Student {
 	
 	public Student() {}
 
-	public Student(Date date_of_birth, Long student_id, String student_name, String student_surname, String email,
+	public Student(Date date_of_birth, Long studentid, String student_name, String student_surname, String email,
 			Long phone_number, String courses) {
 		this.date_of_birth = date_of_birth;
-		this.student_id = student_id;
+		this.studentid = studentid;
 		this.student_name = student_name;
 		this.student_surname = student_surname;
 		this.email = email;
@@ -71,11 +71,11 @@ public class Student {
 	}
 
 	public long getStudentId() {
-		return student_id;
+		return studentid;
 	}
 
-	public void setStudentId(long student_id) {
-		this.student_id = student_id;
+	public void setStudentId(long studentid) {
+		this.studentid = studentid;
 	}
 
 	public String getStudent_name() {

@@ -11,11 +11,11 @@ import com.management.student.model.Student;
 @Repository
 public interface InfoRepository extends JpaRepository<Student, Long>{
 	@Query(value = "select new com.management.student.model.Result(s.student_name, s.student_surname, j.first_grade,j.second_grade) from Student as s "
-			+ ",Java101Grades as j where (s.student_id = :studentid and j.studentid = :studentid)")
+			+ ",Java101Grades as j where (s.studentid = :studentid and j.studentid = :studentid)")
 	public Result findGradeByStudentId(@Param("studentid") Long studentid);
 }
 
-// ctrl + y
+//
 
 // select s.student_name, s.student_surname, j.first_grade, j.second_grade from
 //Student as s, Java101Grades as j where (s.student_id = 29 and j.studentid = 29)
